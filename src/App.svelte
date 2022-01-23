@@ -15,17 +15,15 @@
 </script>
 
 <main>
-	<script>
+	<div class="logo"/>
 
-	</script>
-	
-	<button on:click={stopAll}>
+	<button on:click={stopAll} style="margin-bottom: 20px;">
 		Stop all!
 	</button>
 	
 	{#each audioTracks as {name, src}}
-	<div>
-		<span>{name}</span>
+	<div class="player">
+		<span class="name">{name}</span>
 		<AudioPlayer {src} />
 	</div>
 	{/each}
@@ -35,11 +33,57 @@
 
 
 <style>
+	button {
+		border: 1px solid red;
+		background-color: red;
+		width: 300px;
+		padding: 5px;
+		margin: 5px;
+		color: white;
+		border-radius: 5px;
+	}
+
+	button:hover {
+		background-color: white;
+		color: red;
+	}
+
+	button:active {
+		background-color: #00338D;
+		color: white;
+	}
+
+	.logo {
+		display: block;
+		width: 300px;
+		height: 200px;
+		margin: 0 auto;
+		background-image: url('https://bldsh-public.s3.amazonaws.com/Buffalo_Bills_logo.jpg');
+		background-repeat: no-repeat;
+		background-size: 300px 200px	;
+	}
+
 	main {
 		text-align: center;
 		padding: 1em;
 		max-width: 240px;
 		margin: 0 auto;
+	}
+
+	.player {
+		background-color: #00338D;
+		border-radius: 10px;
+		width: 300px;
+		padding-top: 10px;
+		padding-bottom: 10px;
+		margin: 0 auto;
+		margin-bottom: 10px;
+	}
+
+	.player .name {
+		color: white;
+		font-weight: bold;
+		font-size: +2;
 	}
 
 	h1 {
