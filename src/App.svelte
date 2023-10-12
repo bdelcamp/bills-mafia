@@ -5,11 +5,11 @@
 	let audioTracks = [
 		{
 			name: "Bills Mafia",
-			src: "https://bldsh-public.s3.amazonaws.com/bills_mafia.webm"
+			src: "https://bldsh-public.s3.amazonaws.com/bills_mafia.mp3"
 		},
 		{
 			name: "Shout",
-			src: "https://bldsh-public.s3.amazonaws.com/bills_shout.webm"
+			src: "https://bldsh-public.s3.amazonaws.com/bills_shout.mp3"
 		}
 	]
 </script>
